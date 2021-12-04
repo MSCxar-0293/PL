@@ -16,17 +16,13 @@ func main(){
 
      switch choice {
 	case "总电阻":
-	fmt.Printf("请输入分电阻1: \n")
-	fmt.Scanf("%d",&ro)
-	fmt.Printf("请输入分电阻2: \n")
-	fmt.Scanf("%d",&rt)
+	fmt.Printf("请按格式输入分电阻1和2: \n[格式: 分电阻1 分电阻2]\n")
+	fmt.Scanf("%d %d",&ro,&rt)
 	cal = allr(ro, rt)
 	fmt.Printf("总电阻为：%d\n", cal)
 	case "分电阻":
-	fmt.Printf("请输入总电阻：\n")
-	fmt.Scanf("%d",&ra)
-	fmt.Printf("请输入已知分电阻：\n")
-	fmt.Scanf("%d",&ro)
+	fmt.Printf("请按格式输入总电阻和已知分电阻：\n[格式: 总电阻 已知分电阻]\n")
+	fmt.Scanf("%d %d",&ra, &ro)
 	cal = oner(ra, ro)
 	fmt.Printf("你要求的分电阻为：%d\n", cal)
      }
