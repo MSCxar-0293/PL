@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+  "fmt"
+  "time"
+)
 
 func main(){
      fmt.Printf("欢迎使用并联电路电阻计算器v1.0~\n")
@@ -26,6 +29,8 @@ func main(){
 	cal = oner(ra, ro)
 	fmt.Printf("你要求的分电阻为：%d\n", cal)
      }
+     fmt.Printf("计算器将于5秒后自动关闭。")
+     time.Sleep(time.Duration(5000)*time.Millisecond)
 }
 
 func allr(r1,r2 int) int{
