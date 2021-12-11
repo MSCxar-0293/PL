@@ -23,14 +23,16 @@ func main(){
 	fmt.Scanf("%d %d",&ro,&rt)
 	cal = allr(ro, rt)
 	fmt.Printf("总电阻为：%d\n", cal)
+	fmt.Printf("计算器将于5秒后自动关闭。\n")
+	time.Sleep(time.Duration(5000)*time.Millisecond)
 	case "分电阻":
 	fmt.Printf("请按格式输入总电阻和已知分电阻：\n[格式: 总电阻 已知分电阻]\n")
 	fmt.Scanf("%d %d",&ra, &ro)
 	cal = oner(ra, ro)
 	fmt.Printf("你要求的分电阻为：%d\n", cal)
+	fmt.Printf("计算器将于5秒后自动关闭。\n")
+	time.Sleep(time.Duration(5000)*time.Millisecond)
      }
-     fmt.Printf("计算器将于5秒后自动关闭。")
-     time.Sleep(time.Duration(5000)*time.Millisecond)
 }
 
 func allr(r1,r2 int) int{
